@@ -35,15 +35,25 @@ ul {
 
 /* SIDEBAR */
 
-.sidenav {
+.sidetop {
   height: 100%; 
   width: 35%; 
-  position: fixed; 
+  position: fixed;
+  top: 0; 
+  right: 0;
+  overflow-x: hidden;
+  padding: 12rem 0 5rem 0;
+}
+
+.sidebg {
+  height: 100%; 
+  width: 35%; 
+  position: fixed;
   z-index: -2; 
   top: 0; 
   right: 0;
   background-color: white; 
-  overflow-x: hidden; /* Disable horizontal scroll */
+  overflow-x: hidden;
   padding: 12rem 0 5rem 0;
 }
 
@@ -52,7 +62,7 @@ ul {
 }
 
 .side-content h2 {
-  font-weight: 500;
+  font-weight: 600;
   font-size: .9rem;
   letter-spacing: .3rem;
   padding-bottom: .5rem;
@@ -64,7 +74,7 @@ ul {
   padding: .75rem 0 0 0;
   text-decoration: none;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: .9rem;
   color: #424240;
   display: block;
 }
@@ -99,8 +109,8 @@ ul {
 
 .banner {
   background-color: #dffffd;
-  height: 50rem;
-  width: 47rem;
+  height: 80vh;
+  width: 58.5vw;
   left: 11rem;
   position: absolute;
   z-index: -1;
@@ -115,6 +125,7 @@ ul {
   min-width: 100%;
   min-height: 100%;
   opacity: 0.4;
+  image-rendering: auto;
 }
 
 .main-section {
@@ -209,6 +220,10 @@ ul {
 
 #ul-about .right {
   width: 50%;
+}
+
+#ul-about img {
+  width: 7rem;
 }
 
 #ib-experience .left {
