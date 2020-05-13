@@ -1,8 +1,11 @@
 /* GLOBAL */
 
+.window {
+  max-width: 2000px;
+}
+
 body {
   background-color: #fff0f0;
-  /* font-family: 'Poppins'; */
   font-family: 'Poppins', sans-serif;
   font-weight: 200;
 }
@@ -10,18 +13,19 @@ body {
 h2 {
   font-size: 1.75rem;
   font-weight: 500;
+  color: #424240
 }
 
 h3 {
   font-size: 1.25rem;
   font-weight: 400;
-  color: #272727;
+  color: #424240;
 }
 
 p {
   font-size: 1rem;
   font-weight: 400;
-  color: #272727;
+  color: #424240;
 }
 
 ul {
@@ -35,7 +39,7 @@ ul {
   height: 100%; 
   width: 35%; 
   position: fixed; 
-  z-index: -1; 
+  z-index: -2; 
   top: 0; 
   right: 0;
   background-color: white; 
@@ -48,11 +52,11 @@ ul {
 }
 
 .side-content h2 {
-  font-weight: 600;
+  font-weight: 500;
   font-size: .9rem;
   letter-spacing: .3rem;
   padding-bottom: .5rem;
-  border-bottom: .1rem solid;
+  border-bottom: .1rem solid #424240;
   width: 90%
 }
 
@@ -61,8 +65,20 @@ ul {
   text-decoration: none;
   font-weight: 400;
   font-size: 1rem;
-  color: black;
+  color: #424240;
   display: block;
+}
+
+#side-footer {
+  width: 35%;
+  bottom: 0;  
+  position: fixed;
+  margin-bottom: 4rem;
+}
+
+#side-footer a {
+  font-size: .8rem;
+  line-height: .6rem;
 }
 
 /* MAIN */
@@ -73,20 +89,40 @@ ul {
 }
 
 .cover-page {
-  height: 100vh;
-  display: flex;
   align-items: center;
+  display: flex;
+  height: 100vh;
   color: #f44647;
   font-size: 4em;
+  line-height: 8rem;
+}
+
+.banner {
+  background-color: #dffffd;
+  height: 50rem;
+  width: 47rem;
+  left: 11rem;
+  position: absolute;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden
+}
+
+.banner img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0.4;
 }
 
 .main-section {
-  padding-top: 7%;
-  /* z-index: 1; */
+  padding-top: 5%;
 }
 
 .section-text {
-  width: 85%;
+  width: 100%;
 }
 
 .info-block {
@@ -94,6 +130,7 @@ ul {
   margin: 3rem 0 3rem 0 ;
   background-color: #f44647;
   align-items: center;
+  opacity: 0.9;
 }
 
 .info-block-content {
@@ -104,6 +141,12 @@ ul {
 .info-block-content p {
   color: white;
   font-weight: 300;
+}
+
+.info-block-content h2 {
+  font-weight: 400;
+  color: white;
+  letter-spacing: .1rem;
 }
 
 .info-block-content h3 {
@@ -122,11 +165,11 @@ ul {
 }
 
 #portfolio-link {
-  margin-left: 10rem;
+  margin-left: 11.5rem;
 }
 
 #resume-link {
-  margin-left: 5rem;
+  margin-left: 2rem;
 }
 
 .row {
@@ -141,12 +184,23 @@ ul {
   float: left;
 }
 
-#ul-about .column img {
-  height: 6em;
+.left-mini {
+  width: 50%;
+}
+
+.mini ul {
+  list-style: disc;
+  padding-left: 1rem;
+  font-size: .9rem;
+  font-weight: 400;
 }
 
 #ul-about p {
   width: 60%;
+}
+
+#ul-about li {
+  color: #424240;
 }
 
 #ul-about .left {
@@ -160,8 +214,8 @@ ul {
 #ib-experience .left {
   width: 30%;
   border-right: solid 2px;
-  text-align: center;
-  vertical-align: middle;
+  padding-left: 5rem;
+  text-align: left;
 }
 
 #ib-experience .right {
@@ -171,6 +225,10 @@ ul {
 
 .ib-ul {
   padding-left: 0;
+}
+
+.main-section-bottom {
+  margin-bottom: 20vh;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
