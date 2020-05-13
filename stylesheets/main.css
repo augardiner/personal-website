@@ -1,13 +1,10 @@
-/* GLOBAL */
-
-.window {
-  max-width: 2000px;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: #fff0f0;
   font-family: 'Poppins', sans-serif;
-  font-weight: 200;
 }
 
 h2 {
@@ -238,6 +235,16 @@ ul {
   padding-left: 4rem;
 }
 
+#ib-links .left {
+  width: 16%;
+  padding-left: 0;
+  text-align: left;
+}
+
+#ib-links .right {
+  width: 70%;
+}
+
 .ib-ul {
   padding-left: 0;
 }
@@ -246,8 +253,22 @@ ul {
   margin-bottom: 20vh;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-/* @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-} */
+#footer-banner {
+  background-color: #d3fffc;
+  height: 12vh;
+  width: 58.5vw;
+  left: 11rem;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: bottom;
+  overflow: hidden
+}
+
+#footer-banner img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0.4;
+  image-rendering: auto;
+}  
