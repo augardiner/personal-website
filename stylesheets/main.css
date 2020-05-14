@@ -58,7 +58,7 @@ ul {
   padding: .75rem 0 0 8rem;
 }
 
-.side-content h2 {
+#side-header {
   font-weight: 600;
   font-size: .9rem;
   letter-spacing: .3rem;
@@ -126,7 +126,7 @@ ul {
 }
 
 .main-section {
-  padding-top: 5%;
+  padding-top: 1%;
 }
 
 .section-text {
@@ -142,7 +142,7 @@ ul {
 }
 
 .info-block-content {
-  padding: 3rem;
+  padding: 1rem;
   color: white;
 }
 
@@ -226,13 +226,17 @@ ul {
 #ib-experience .left {
   width: 30%;
   border-right: solid 2px;
-  padding-left: 5rem;
-  text-align: left;
+  padding-right: 3.5rem;
+  text-align: right;
 }
 
 #ib-experience .right {
   width: 70%;
   padding-left: 4rem;
+}
+
+#ib-links {
+  padding: 3rem;
 }
 
 #ib-links .left {
@@ -247,10 +251,6 @@ ul {
 
 .ib-ul {
   padding-left: 0;
-}
-
-.main-section-bottom {
-  margin-bottom: 20vh;
 }
 
 #footer-banner {
@@ -271,4 +271,59 @@ ul {
   min-height: 100%;
   opacity: 0.4;
   image-rendering: auto;
-}  
+} 
+
+/* BREAKPOINTS */
+@media screen and (max-width: 1095px) {
+  h3 {
+    font-size: 1.05rem;
+  }
+  p {
+    font-size: .9rem;
+  }
+  .mini li {
+    font-size: .75rem;
+  }
+
+  #ib-experience .left {
+    padding-right: 1.5rem;
+  }
+
+  #ib-experience .right {
+    padding-left: 2rem;
+  }
+
+  #side-header {
+    font-size: .7rem;
+  }
+
+  #ul-about img {
+    height: 6rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  body {
+    width: 130%;
+    overflow-x: hidden;
+  }
+  .section-text {
+    width: 110%;
+  }
+  .sidetop {
+    display: none;
+  }
+  .sidebg {
+    display: none;
+  }
+  .banner {
+    width: 72vw;
+  }
+  .info-block {
+    margin-left: 3rem;
+    width: 106%;
+  }
+  #footer-banner {
+    width: 65vw;
+  }
+}
