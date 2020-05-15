@@ -24,7 +24,3 @@ menuAnchors.forEach((a) => {
     menu.style.display = 'none';
   })
 })
-
-menu.onblur = () => {
-  menu.style.display = 'none';
-}

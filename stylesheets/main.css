@@ -373,7 +373,7 @@ ul {
     width: 60%;
   }
   #ul-about .right {
-    margin-left: 8rem;
+    margin-left: 4rem;
     width: 60%;
   }
   #menu-button {
@@ -398,7 +398,7 @@ ul {
     top: 0;
     right: 0;
     padding: 1.5rem;
-    opacity: 0.95;
+    opacity: 0.97;
   }
   #side-header {
     margin-top: 2rem;
@@ -417,6 +417,9 @@ ul {
     line-height: .5rem;
     letter-spacing: .1rem;
     font-weight: 500;
+  }
+  .mini {
+    width: 40vw;
   }
 }
 
@@ -440,10 +443,65 @@ ul {
   }
 }
 
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 800px) {
   .cover-page h1 {
     font-size: 7rem;
     line-height: 7rem;
+  }
+  #ul-about .right {
+    margin-left: 2rem;
+  }
+  .mini {
+    width: 45vw;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  h2 {
+    font-size: 1.25rem;
+  }
+  h3 {
+    font-size: .85rem;
+  }
+  p {
+    font-size: .75rem;
+    line-height: 1.75rem;
+  }
+  #ul-about img {
+    height: 5rem;
+  }
+  #ul-about .right {
+    margin-left: .25rem;
+  }
+  .mini li {
+    font-size: .5rem;
+  }
+  .banner {
+    left: 5rem;
+    width: 80vw;
+  }
+  .cover-page h1 {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+  .info-block {
+    margin: 1.5rem 0 1.5rem 1rem ;
+  }
+  .info-block-content {
+    padding: .5rem 0 .5rem 0;
+  }
+  #ib-links {
+    padding: 1.5rem;
+  }
+  #ib-links a {
+    font-size: .75rem;
+  }
+  #footer-banner {
+    left: 4rem;
+    width: 80vw;
+  }
+  #topbar-contact{
+    margin-top: 1.5rem;
   }
 }
 
