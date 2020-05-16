@@ -2,42 +2,62 @@ $dark-color: #424240;
 $light-color: #fff0f0;
 $primary-color: #f44647;
 
-// GLOBAL
+// MEDIA QUERY MIXINS
+@mixin break-1 {
+  @media screen and (max-width: 1100px) {
+    @content;
+  }
+}
+@mixin break-2 {
+  @media screen and (max-width: 950px) {
+    @content;
+  }
+}
+@mixin break-3 {
+  @media screen and (max-width: 700px) {
+    @content;
+  }
+}
 
+// GLOBAL
 * {
   scroll-behavior: smooth;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-body {
-  background-color: $light-color;
-  /* background-color: rgb(255, 255, 233); */
-  font-family: 'Poppins', sans-serif;
-}
-.container {
-  // border: solid green;
-  max-width: 1280px;
-  padding: 0 0 0 2%;
-  margin: 0 auto;
-  // overflow: auto; //comment out for sticky sidebar
-  display: flex;
-  justify-content: space-between;
-}
-.row {
-  display: flex;
-}
-.column {
-  float: left;
+  @include break-2 {
+    overflow-x: hidden;
+  }
+  body {
+    background-color: $light-color;
+    /* background-color: rgb(255, 255, 233); */
+    font-family: 'Poppins', sans-serif;
+  }
+  .container {
+    max-width: 1280px;
+    padding: 0 0 0 2%;
+    margin: 0 auto;
+    // overflow: auto; //comment out for sticky sidebar
+    display: flex;
+    justify-content: space-between;
+  }
+  .row {
+    display: flex;
+  }
+  .column {
+    float: left;
+  }
 }
 
 // SIDEBAR
-
 #sidebar {
   width: 40%;
   height: 100vh;
   position: sticky;
   top: 0;
+  @include break-2 {
+    display: none;
+  }
   #sidebar-bg {
     height: 100%;
     z-index: -2; 
@@ -52,19 +72,28 @@ body {
     color: $dark-color;
     h2 {
       font-weight: 600;
-      font-size: .9rem;
+      font-size: 1rem;
       letter-spacing: .3rem;
       padding-bottom: .5rem;
       border-bottom: .1rem solid $dark-color;
       width: 90%;
+      @include break-1 {
+        width: 100%;
+        font-size: .8rem;
+        padding-bottom: .25rem;
+        border-bottom: .075rem solid $dark-color;
+      }
     }
     a {
       display: block;
       padding-top: .75rem;
-      letter-spacing: .075rem;
+      letter-spacing: .1rem;
       font-size: .9rem;
       color: $dark-color;
       text-decoration: none;
+      @include break-1 {
+        font-size: .7rem;      
+      }
     }
     #sidebar-footer {
       position: fixed;
@@ -72,15 +101,16 @@ body {
       a {
         font-size: .8rem;
         line-height: .6rem;
+        @include break-1 {
+          font-size: .7rem;
+        }
       }
     }
   }
 }
 
 // MAIN SECTION
-
 #main {
-  // border: solid red;
   max-width: 934px;
   z-index: 1;
   color: #424240;
@@ -89,30 +119,43 @@ body {
     font-weight: 500;
     letter-spacing: .1rem;
     margin-bottom: 2%;
+    @include break-1 {
+      font-size: 1.35rem;
+    }
   }
   h3 {
+    letter-spacing: .055rem;
     font-size: 1.25rem;
     font-weight: 400;
+    @include break-1 {
+      font-size: 1rem;
+    }
   }
   p {
-    font-size: 1rem;
+    font-size: .9rem;
     font-weight: 400;
     line-height: 2rem;
+    padding-right: 5%;
+    @include break-1 {
+      font-size: .75rem;      
+    }
   }
   .section {
     padding-top: 4%;
   }
   .info-block {
-    border: solid red;
     margin: 2%;
     width: 108%;
     padding: 3rem;
-    background-color: #f44647;
+    background-color: $primary-color;
     opacity: 0.8;
-    color: white;
-    a {
-      color: white;
-      text-decoration: none;
+    color: $light-color;
+    @include break-1 {
+      width: 106%;           
+      padding: 2rem;
+    }
+    @include break-2 {
+      width: 95%;
     }
     h2 {
       font-weight: 400;
@@ -125,6 +168,16 @@ body {
     }
     p {
       font-weight: 300;
+    }
+    a {
+      font-weight: 400;
+      letter-spacing: .2rem;
+      border-bottom: solid 1px;
+      color: $light-color;
+      text-decoration: none;
+      @include break-1 {
+        font-size: .9rem;
+      }
     }
     .left {
       width: 30%;
@@ -144,6 +197,12 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    @include break-1 {
+      width: 93%;
+    }
+    @include break-2 {
+      width: 82%;
+    }
     img {
       flex-shrink: 0;
       min-width: 100%;
@@ -158,13 +217,18 @@ body {
   display: flex;
   align-items: center;
   position: relative;
-
   h1 {
     font-size: 8em;
     line-height: 8rem;
     letter-spacing: .5rem;
-    color: #f44647;
+    color: $primary-color;
     opacity: .825;
+    @include break-2 {
+      height: 20rem;     
+    }
+    @include break-3 {
+      font-size: 7rem;
+    }
   }
   #front-page-image {
     position: absolute;
@@ -173,37 +237,33 @@ body {
   }
 }
 
-#info-block-links {
-  a {
-    font-weight: 500;
-    letter-spacing: .2rem;
-    border-bottom: solid 1px;
-  }
-}
-
 #info-block-experience {
-  .left {
-    border-right: solid 2px;
-  }
   .row {
     height: 5rem;
+  }
+  .left {
+    border-right: solid 2px;
   }
 }
 
 #section-skills {
   h3 {
-    font-weight: 500;
-    letter-spacing: .1em;
     margin: 2% 0;
+    @include break-2 {
+      margin: 1% 0;
+    }
   }
-  ul {
-    list-style: disc;
-    padding-left: 0rem;
-    font-size: .9rem;
-    font-weight: 400;
+  li {
+    font-size: .8rem;
+    @include break-1 {
+      font-size: .7rem;
+    }
   }
   img {
     height: 8rem;
+    @include break-1 {
+      height: 6rem;
+    }
   }
   .row {
     margin-bottom: 3%;
@@ -213,9 +273,24 @@ body {
     width: 50%;
   }
   .left-mini, .right-mini {
-    width: 50%;
+    width: 40%;
     line-height: 1.5rem;
     letter-spacing: .05rem;
     font-weight: 400;
+    list-style-position: inside;
+  }
+  .right-mini {
+    width: 50%;
+  }
+}
+
+#footer-image {
+  margin-bottom: 5%;
+  margin-left: 15%;
+  left: 15%;
+  height: 12vh;
+  background-color: #dffffd;
+  img {
+    max-width: 90%;
   }
 }
