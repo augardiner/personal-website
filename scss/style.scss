@@ -122,6 +122,9 @@ $primary-color: #f44647;
     @include break-1 {
       font-size: 1.35rem;
     }
+    @include break-3 {
+      font-size: 1.15rem;
+    }
   }
   h3 {
     letter-spacing: .055rem;
@@ -129,6 +132,9 @@ $primary-color: #f44647;
     font-weight: 400;
     @include break-1 {
       font-size: 1rem;
+    }
+    @include break-3 {
+      font-size: .7rem;
     }
   }
   p {
@@ -138,6 +144,10 @@ $primary-color: #f44647;
     padding-right: 5%;
     @include break-1 {
       font-size: .75rem;      
+    }
+    @include break-3 {
+      font-size: .65rem;
+      line-height: 1.75rem;
     }
   }
   .section {
@@ -149,13 +159,16 @@ $primary-color: #f44647;
     padding: 3rem;
     background-color: $primary-color;
     opacity: 0.8;
-    color: $light-color;
+    color: $light-color;    
     @include break-1 {
       width: 106%;           
       padding: 2rem;
     }
-    @include break-2 {
+    @include break-2 {      
       width: 95%;
+    }
+    @include break-3 {
+      padding: 1rem;
     }
     h2 {
       font-weight: 400;
@@ -165,9 +178,15 @@ $primary-color: #f44647;
       margin-bottom: -.25rem;
       letter-spacing: .1rem;
       font-weight: 400;
+      @include break-3 {
+        font-size: .75rem;
+      }
     }
     p {
       font-weight: 300;
+      @include break-3 {
+        font-size: .7rem;
+      }
     }
     a {
       font-weight: 400;
@@ -177,6 +196,9 @@ $primary-color: #f44647;
       text-decoration: none;
       @include break-1 {
         font-size: .9rem;
+      }
+      @include break-3 {
+        font-size: .75rem;
       }
     }
     .row {
@@ -232,13 +254,23 @@ $primary-color: #f44647;
       height: 20rem;     
     }
     @include break-3 {
-      font-size: 7rem;
+      font-size: 6rem;
+      letter-spacing: .25rem;
     }
   }
   #front-page-image {
     position: absolute;
     height: 80vh;
     background-color: #dffffd;
+  }
+}
+
+#info-block-links {
+  .row {
+    align-items: center;
+  }
+  @include break-3 {
+    padding: .5rem 0 !important;
   }
 }
 
@@ -257,17 +289,27 @@ $primary-color: #f44647;
     @include break-2 {
       margin: 1% 0;
     }
+    @include break-3 {
+      font-size: .8rem;
+    }
   }
   li {
     font-size: .8rem;
     @include break-1 {
       font-size: .7rem;
     }
+    @include break-3 {
+      font-size: .5rem;
+      line-height: 1.15rem;
+    }
   }
   img {
     height: 8rem;
     @include break-1 {
       height: 6rem;
+    }
+    @include break-3 {
+      height: 5rem;
     }
   }
   .row {
