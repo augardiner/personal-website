@@ -18,6 +18,11 @@ $primary-color: #f44647;
     @content;
   }
 }
+@mixin break-4 {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
 
 // GLOBAL
 * {
@@ -149,6 +154,9 @@ $primary-color: #f44647;
       font-size: .65rem;
       line-height: 1.75rem;
     }
+    @include break-4 {
+      line-height: 1.5rem;
+    }
   }
   .section {
     padding-top: 4%;
@@ -187,6 +195,9 @@ $primary-color: #f44647;
       @include break-3 {
         font-size: .7rem;
       }
+      @include break-4 {
+        font-size: .5rem;
+      }
     }
     a {
       font-weight: 400;
@@ -205,11 +216,17 @@ $primary-color: #f44647;
       @include break-2 {
         height: 4rem;
       }
+      @include break-4 {
+        height: 3rem;
+      }
     }
     .left {
       width: 30%;
       text-align: right;
       padding-right: 10%;
+      @include break-4 {
+        width: 40%;
+      }
     }
     .right {
       width: 70%;
@@ -256,6 +273,11 @@ $primary-color: #f44647;
     @include break-3 {
       font-size: 6rem;
       letter-spacing: .25rem;
+    }
+    @include break-4 {
+      font-size: 4.25rem;
+      line-height: 5rem;
+      letter-spacing: .5rem;
     }
   }
   #front-page-image {
@@ -311,16 +333,30 @@ $primary-color: #f44647;
     @include break-3 {
       height: 5rem;
     }
+    @include break-4 {
+      height: 4rem;
+    }
   }
   .row {
     margin-bottom: 3%;
+  }
+  .row-mini {
+    @include break-4 {
+     .column {
+       float: none;
+       width: 100%;      
+     } 
+     li {
+       line-height: .95rem;
+     }
+    }
   }
   .left, .right {
     align-items: left;
     width: 50%;
   }
   .left-mini, .right-mini {
-    width: 40%;
+    width: 45%;
     line-height: 1.5rem;
     letter-spacing: .05rem;
     font-weight: 400;
