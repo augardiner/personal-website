@@ -179,6 +179,11 @@ $primary-color: #f44647;
         font-size: .9rem;
       }
     }
+    .row {
+      @include break-2 {
+        height: 4rem;
+      }
+    }
     .left {
       width: 30%;
       text-align: right;
