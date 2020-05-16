@@ -342,6 +342,7 @@ $primary-color: #f44647;
   }
   .row-mini {
     @include break-4 {
+      margin-bottom: 1rem;
      .column {
        float: none;
        width: 100%;      
