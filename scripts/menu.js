@@ -1,6 +1,6 @@
-const breakpoint = window.matchMedia( "(max-width: 960px)" );
+// const breakpoint = window.matchMedia( "(max-width: 960px)" );
 const menuButton = document.getElementById('menu-button');
-const menu = document.getElementById('topbar');
+const menu = document.getElementById('menu-content');
 const menuAnchors = menu.querySelectorAll('a');
 
 menuButton.addEventListener('click', () => {
