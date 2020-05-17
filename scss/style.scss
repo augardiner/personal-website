@@ -333,6 +333,7 @@ $off-white: #FEFEFE;
   }
   img {
     height: 8rem;
+    opacity: 0.8;
     @include break-1 {
       height: 6rem;
     }
